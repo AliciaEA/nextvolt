@@ -87,11 +87,31 @@
     }
   });
 
+  // Navbar: hides while scrolling down, comes back on scroll up.
   const nav = document.querySelector(".nav");
   if (nav) {
-    const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 8);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    let lastY = window.scrollY;
+    let ticking = false;
+    const update = () => {
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      nav.style.setProperty("--p", max > 0 ? (y / max).toFixed(4) : 0);
+      nav.classList.toggle("is-scrolled", y > 8);
+      if (y < 120 || nav.contains(document.activeElement)) {
+        nav.classList.remove("is-hidden");
+      } else if (y > lastY + 6) {
+        nav.classList.add("is-hidden");
+      } else if (y < lastY - 6) {
+        nav.classList.remove("is-hidden");
+      }
+      if (Math.abs(y - lastY) > 6) lastY = y;
+      ticking = false;
+    };
+    window.addEventListener("scroll", () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    nav.addEventListener("focusin", () => nav.classList.remove("is-hidden"));
+    update();
   }
 
   // Order buttons
