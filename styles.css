@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --cream: #f6f0e6;
   --paper: #fffdf8;
   --navy: #10304a;
@@ -16,7 +16,7 @@
   --on-dark: #dce7ee;
   --on-dark-2: #aabdcb;
   --serif: "Fraunces", Georgia, serif;
-  --sans: "Spline Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --nav-h: 76px;
   --hex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%2345bfae' stroke-opacity='0.14' stroke-width='1.4'/%3E%3C/svg%3E");
   --hexclip: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
