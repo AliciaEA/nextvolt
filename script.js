@@ -5,6 +5,20 @@
     email: "",
   };
 
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        en.target.classList.add("is-in");
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach((n) => io.observe(n));
+  } else {
+    reveals.forEach((n) => n.classList.add("is-in"));
+  }
+
   const NS = "http://www.w3.org/2000/svg";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -65,17 +79,9 @@
     }
   }
   const hero = document.getElementById("heroMark");
-  if (hero) buildMark(hero);
-
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((en) => {
-      if (!en.isIntersecting) return;
-      en.target.classList.add("is-in");
-      io.unobserve(en.target);
-    });
-  }, { threshold: 0.15 });
-  document.querySelectorAll(".reveal").forEach((n) => io.observe(n));
+  if (hero) {
+    try { buildMark(hero); } catch (e) { console.error(e); }
+  }
 
   // Order buttons
   let chosen = "";
