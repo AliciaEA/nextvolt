@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -8,27 +8,29 @@
   <meta property="og:title" content="NextVolt · Kits solares de segunda vida">
   <meta property="og:description" content="Paneles solares recuperados que bombean agua para tu casa, tu ganado y tu cultivo. Desde US$251.">
   <meta property="og:image" content="assets/logo.png">
-  <meta name="theme-color" content="#12324a">
+  <meta name="theme-color" content="#0d2638">
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
 <header class="nav" id="top">
-  <a class="nav__brand" href="#top" aria-label="NextVolt, inicio">
-    <img src="assets/logo.png" alt="Logo de NextVolt" width="508" height="370">
-  </a>
-  <nav class="nav__links" aria-label="Secciones">
-    <a href="#kits">Kits</a>
-    <a href="#como">Cómo funciona</a>
-    <a href="#empresas">Para empresas</a>
-    <a href="#preguntas">Preguntas</a>
-  </nav>
-  <a class="btn btn--small" href="#pedido">Quiero mi kit</a>
+  <div class="wrap nav__row">
+    <a class="nav__brand" href="#top" aria-label="NextVolt, inicio">
+      <img src="assets/logo.png" alt="Logo de NextVolt" width="508" height="370">
+    </a>
+    <nav class="nav__links" aria-label="Secciones">
+      <a href="#kits">Kits</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#empresas">Para empresas</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn--gold btn--sm" href="#pedido">Quiero mi kit</a>
+  </div>
 </header>
 
 <main>
@@ -36,164 +38,221 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap hero__grid">
-      <div>
-        <p class="eyebrow">Paneles solares con segunda vida</p>
-        <h1 class="hero__title">Agua para tu casa, tu ganado y tu cultivo, <span>con energía solar recuperada.</span></h1>
+      <div class="hero__copy">
+        <span class="pill"><i></i>Paneles solares con segunda vida</span>
+        <h1 class="hero__title">Agua para tu casa, tu ganado y tu cultivo <em>con energía solar recuperada.</em></h1>
         <p class="hero__lead">Recuperamos paneles solares retirados, verificamos que funcionen y los instalamos para bombear tu agua.</p>
-        <p class="hero__price">Desde <b>US$251</b> · instalación incluida</p>
         <div class="hero__ctas">
-          <a class="btn" href="#kits">Ver kits</a>
-          <a class="btn btn--ghost" href="#empresas">Tengo paneles retirados</a>
+          <a class="btn btn--gold" href="#kits">Ver kits <span aria-hidden="true">→</span></a>
+          <a class="btn btn--line" href="#empresas">Tengo paneles retirados</a>
         </div>
-        <ul class="checks">
-          <li>Panel probado y con ficha QR</li>
-          <li>Sin diésel ni recibos de luz</li>
-          <li>Pagos según tu cosecha</li>
-        </ul>
       </div>
+
       <div class="hero__art" aria-hidden="true">
+        <div class="halo"></div>
         <svg class="mark" id="heroMark" viewBox="0 0 400 440"></svg>
+        <div class="passport">
+          <div class="passport__top">
+            <span class="passport__qr"></span>
+            <div>
+              <small>Passport</small>
+              <b>NV-26-0417</b>
+            </div>
+            <span class="passport__ok">✓ Verificado</span>
+          </div>
+          <div class="passport__row"><span>Potencia útil</span><b>280 W</b></div>
+          <div class="passport__row"><span>Segunda vida</span><b>Kit Ganado</b></div>
+        </div>
+        <div class="tag-price">Desde <b>US$251</b></div>
       </div>
     </div>
   </section>
 
+  <!-- FACT BAR -->
+  <div class="wrap facts-wrap">
+    <ul class="facts">
+      <li><b>Instalación</b><span>incluida en el precio</span></li>
+      <li><b>Panel probado</b><span>con ficha QR</span></li>
+      <li><b>Sin diésel</b><span>ni recibos de luz</span></li>
+      <li><b>Pagos</b><span>según tu cosecha</span></li>
+    </ul>
+  </div>
+
   <!-- KITS -->
-  <section class="section section--tint" id="kits">
+  <section class="section" id="kits">
     <div class="wrap">
-      <h2 class="h2 reveal">Elige tu kit</h2>
-      <p class="sub reveal">Todos incluyen panel verificado, bomba, controlador, protecciones, instalación y garantía. Si ya tienes tanque, lo usamos.</p>
+      <header class="head reveal">
+        <span class="kicker">Kits</span>
+        <h2 class="h2">Elige el tuyo</h2>
+        <p class="sub">Si ya tienes tanque o tubería, los usamos. Solo pagas lo que te falta.</p>
+      </header>
 
       <div class="kits">
         <article class="kit reveal">
-          <span class="kit__icon">🏠</span>
+          <div class="kit__icon">
+            <svg viewBox="0 0 48 48"><path d="M8 22 24 9l16 13"/><path d="M12 19v20h24V19"/><path d="M21 39V28h6v11"/></svg>
+          </div>
           <h3>Doméstico</h3>
           <p class="kit__for">Para tu casa</p>
-          <p>Agua para lavar, limpiar y regar el patio (uso no potable).</p>
-          <div class="kit__price">US$251<small>C$9.200</small></div>
-          <a class="btn btn--block" href="#pedido" data-kit="Doméstico">Lo quiero</a>
+          <p class="kit__desc">Agua para lavar, limpiar y regar el patio (uso no potable).</p>
+          <div class="kit__foot">
+            <div class="kit__price"><b>US$251</b><small>C$9.200</small></div>
+            <a class="btn btn--navy btn--block" href="#pedido" data-kit="Doméstico">Lo quiero</a>
+          </div>
         </article>
-        <article class="kit kit--star reveal">
-          <span class="kit__icon">🐄</span>
+
+        <article class="kit kit--feat reveal">
+          <div class="kit__icon">
+            <svg viewBox="0 0 48 48"><path d="M24 6c-5 7-8 11-8 15a8 8 0 0 0 16 0c0-4-3-8-8-15z"/><path d="M6 32h36l-4 10H10z"/></svg>
+          </div>
           <h3>Ganado</h3>
           <p class="kit__for">Para tus animales</p>
-          <p>Agua directo a los bebederos, sin cargar baldes ni que el ganado entre al reservorio.</p>
-          <div class="kit__price">US$276<small>C$10.100</small></div>
-          <a class="btn btn--block btn--gold" href="#pedido" data-kit="Ganado">Lo quiero</a>
+          <p class="kit__desc">Agua directo a los bebederos, sin cargar baldes ni que el ganado entre al reservorio.</p>
+          <div class="kit__foot">
+            <div class="kit__price"><b>US$276</b><small>C$10.100</small></div>
+            <a class="btn btn--gold btn--block" href="#pedido" data-kit="Ganado">Lo quiero</a>
+          </div>
         </article>
+
         <article class="kit reveal">
-          <span class="kit__icon">🌱</span>
+          <div class="kit__icon">
+            <svg viewBox="0 0 48 48"><path d="M24 42V22"/><path d="M24 26c0-8-6-12-14-12 0 8 6 12 14 12z"/><path d="M24 22c0-7 5-11 13-11 0 7-5 11-13 11z"/><path d="M12 42h24"/></svg>
+          </div>
           <h3>Agricultura</h3>
           <p class="kit__for">Para tu cultivo</p>
-          <p>Agua para regar tu huerta o parcela desde un río, pozo o reservorio.</p>
-          <div class="kit__price">US$401<small>C$14.700</small></div>
-          <a class="btn btn--block" href="#pedido" data-kit="Agricultura">Lo quiero</a>
+          <p class="kit__desc">Agua para regar tu huerta o parcela desde un río, pozo o reservorio.</p>
+          <div class="kit__foot">
+            <div class="kit__price"><b>US$401</b><small>C$14.700</small></div>
+            <a class="btn btn--navy btn--block" href="#pedido" data-kit="Agricultura">Lo quiero</a>
+          </div>
         </article>
       </div>
+      <p class="note reveal">Todos incluyen panel verificado, bomba, controlador, protecciones, instalación y garantía.</p>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="section" id="como">
+  <!-- STEPS -->
+  <section class="section section--tint" id="como">
     <div class="wrap">
-      <h2 class="h2 reveal">Así funciona</h2>
+      <header class="head reveal">
+        <span class="kicker">Cómo funciona</span>
+        <h2 class="h2">Del panel retirado a tu agua, en 3 pasos</h2>
+      </header>
       <ol class="steps">
-        <li class="reveal">
-          <span class="steps__n">1</span>
+        <li class="step reveal">
+          <span class="hexnum">1</span>
           <h3>Recuperamos y probamos el panel</h3>
           <p>Recibimos paneles retirados por empresas solares y probamos su seguridad y su potencia. Solo usamos los que pasan.</p>
         </li>
-        <li class="reveal">
-          <span class="steps__n">2</span>
+        <li class="step reveal">
+          <span class="hexnum">2</span>
           <h3>Armamos tu kit a la medida</h3>
-          <p>Vemos tu fuente de agua y la altura, y elegimos la bomba justa. Aprovechamos el tanque o la tubería que ya tienes.</p>
+          <p>Vemos tu fuente de agua y la altura, y elegimos la bomba justa. Aprovechamos lo que ya tienes.</p>
         </li>
-        <li class="reveal">
-          <span class="steps__n">3</span>
+        <li class="step reveal">
+          <span class="hexnum">3</span>
           <h3>Lo instalamos y listo</h3>
-          <p>De día el sol bombea el agua a tu tanque; después baja sola por gravedad. Te enseñamos a usarlo y le damos mantenimiento.</p>
+          <p>De día el sol bombea el agua a tu tanque; después baja sola por gravedad. Te enseñamos a usarlo.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- POR QUE -->
+  <!-- WHY (bento) -->
   <section class="section section--dark">
     <div class="wrap">
-      <h2 class="h2 reveal">¿Por qué NextVolt?</h2>
-      <div class="whys">
-        <div class="why reveal">
-          <h3>Más barato</h3>
+      <header class="head head--light reveal">
+        <span class="kicker">Por qué NextVolt</span>
+        <h2 class="h2">Buen negocio para ti. Mejor para el planeta.</h2>
+      </header>
+      <div class="bento">
+        <div class="tile tile--gold reveal">
+          <small>Se paga solo</small>
+          <b class="tile__big">&lt; 1 año</b>
+          <p>Es lo que tarda en recuperarse el kit Ganado si hoy usas motobomba de diésel.*</p>
+        </div>
+        <div class="tile reveal">
+          <small>Más barato</small>
           <p>El panel es recuperado y solo pagas lo que te falta.</p>
         </div>
-        <div class="why reveal">
-          <h3>Se paga solo</h3>
-          <p>Si hoy usas motobomba de diésel, el kit Ganado se recupera en menos de un año.*</p>
-        </div>
-        <div class="why reveal">
-          <h3>Confiable</h3>
+        <div class="tile reveal">
+          <small>Confiable</small>
           <p>Cada panel se prueba y tiene su ficha QR con su historial.</p>
         </div>
-        <div class="why reveal">
-          <h3>Bueno para el planeta</h3>
-          <p>Cada kit rescata de 22 a 44 kg de paneles que iban a la basura.</p>
+        <div class="tile tile--wide reveal">
+          <small>Bueno para el planeta</small>
+          <p><b class="tile__mid">22–44 kg</b> de paneles rescatados de la basura con cada kit.</p>
         </div>
       </div>
       <p class="fine reveal">*Estimado con un ahorro neto de US$330 al año en combustible.</p>
     </div>
   </section>
 
-  <!-- EMPRESAS -->
+  <!-- BUSINESS -->
   <section class="section" id="empresas">
-    <div class="wrap biz reveal">
-      <div>
-        <p class="eyebrow">Para empresas solares</p>
-        <h2 class="h2">¿Tienes paneles retirados?</h2>
-        <p class="sub">No los botes. Los recogemos, los clasificamos y te entregamos su trazabilidad. Los que sirven vuelven a trabajar; los que no, van a gestores autorizados.</p>
-        <a class="btn" href="#pedido" data-kit="Retiro de paneles">Coordinar un retiro</a>
+    <div class="wrap">
+      <div class="biz reveal">
+        <div class="biz__copy">
+          <span class="kicker">Para empresas solares</span>
+          <h2 class="h2">¿Tienes paneles retirados? No los botes.</h2>
+          <p class="sub">Los recogemos, los clasificamos y te entregamos su trazabilidad. Los que sirven vuelven a trabajar; los que no, van a gestores autorizados.</p>
+          <a class="btn btn--gold" href="#pedido" data-kit="Retiro de paneles">Coordinar un retiro <span aria-hidden="true">→</span></a>
+        </div>
+        <ul class="biz__list">
+          <li><span class="hexdot"></span><div><b>Recogida</b> en rutas agrupadas</div></li>
+          <li><span class="hexdot"></span><div><b>Manejo seguro</b> en transporte y almacenamiento</div></li>
+          <li><span class="hexdot"></span><div><b>Reporte</b> de cada panel con código QR</div></li>
+          <li><span class="hexdot"></span><div><b>Cero</b> paneles en botaderos</div></li>
+        </ul>
       </div>
-      <ul class="biz__list">
-        <li><b>Recogida</b> en rutas agrupadas</li>
-        <li><b>Manejo seguro</b> en transporte y almacenamiento</li>
-        <li><b>Reporte</b> de cada panel con código QR</li>
-        <li><b>Cero</b> paneles en botaderos</li>
-      </ul>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="section section--tint" id="preguntas">
-    <div class="wrap wrap--narrow">
-      <h2 class="h2 reveal">Preguntas frecuentes</h2>
-      <details class="faq reveal">
-        <summary>¿Un panel usado funciona bien?</summary>
-        <p>Sí. Muchos paneles se retiran por renovación y todavía generan energía. Cada uno pasa pruebas de seguridad y de potencia antes de instalarse.</p>
-      </details>
-      <details class="faq reveal">
-        <summary>Ya tengo tanque, ¿igual tengo que comprarlo?</summary>
-        <p>No. Si tu tanque, soporte o tubería están en buen estado, los usamos y solo pagas lo que falta.</p>
-      </details>
-      <details class="faq reveal">
-        <summary>¿Cómo puedo pagar?</summary>
-        <p>Al contado, en compra grupal con tu cooperativa o en cuotas según tu cosecha. También trabajamos con ONG y programas que cofinancian.</p>
-      </details>
-      <details class="faq reveal">
-        <summary>¿Funciona de noche?</summary>
-        <p>La bomba trabaja con el sol. El agua que sube al tanque durante el día queda disponible y baja por gravedad cuando la necesitas.</p>
-      </details>
-      <details class="faq reveal">
-        <summary>¿El agua es para tomar?</summary>
-        <p>El kit Doméstico es para uso no potable. Para consumo humano, el agua necesita su propio tratamiento.</p>
-      </details>
+    <div class="wrap faq-grid">
+      <header class="head reveal">
+        <span class="kicker">Preguntas</span>
+        <h2 class="h2">Lo que más nos preguntan</h2>
+        <p class="sub">¿Tienes otra duda? Escríbenos desde la sección de pedidos.</p>
+      </header>
+      <div>
+        <details class="faq reveal">
+          <summary>¿Un panel usado funciona bien?</summary>
+          <p>Sí. Muchos paneles se retiran por renovación y todavía generan energía. Cada uno pasa pruebas de seguridad y de potencia antes de instalarse.</p>
+        </details>
+        <details class="faq reveal">
+          <summary>Ya tengo tanque, ¿igual tengo que comprarlo?</summary>
+          <p>No. Si tu tanque, soporte o tubería están en buen estado, los usamos y solo pagas lo que falta.</p>
+        </details>
+        <details class="faq reveal">
+          <summary>¿Cómo puedo pagar?</summary>
+          <p>Al contado, en compra grupal con tu cooperativa o en cuotas según tu cosecha. También trabajamos con ONG y programas que cofinancian.</p>
+        </details>
+        <details class="faq reveal">
+          <summary>¿Funciona de noche?</summary>
+          <p>La bomba trabaja con el sol. El agua que sube al tanque durante el día queda disponible y baja por gravedad cuando la necesitas.</p>
+        </details>
+        <details class="faq reveal">
+          <summary>¿El agua es para tomar?</summary>
+          <p>El kit Doméstico es para uso no potable. Para consumo humano, el agua necesita su propio tratamiento.</p>
+        </details>
+      </div>
     </div>
   </section>
 
-  <!-- PEDIDO -->
-  <section class="section section--navy cta" id="pedido">
-    <div class="wrap wrap--narrow">
-      <h2 class="h2">Pide tu kit</h2>
-      <p class="sub sub--light">Cuéntanos qué fuente de agua tienes y te armamos el kit justo.</p>
-      <div class="cta__buttons" id="contactButtons"></div>
-      <p class="cta__note" id="contactNote">Estamos empezando en Estelí, Madriz, Nueva Segovia y León.</p>
+  <!-- CTA -->
+  <section class="section" id="pedido">
+    <div class="wrap">
+      <div class="cta reveal">
+        <svg class="cta__mark" id="ctaMark" viewBox="0 0 400 440" aria-hidden="true"></svg>
+        <div class="cta__copy">
+          <h2 class="h2">Pide tu kit</h2>
+          <p>Cuéntanos qué fuente de agua tienes y te armamos el kit justo.</p>
+          <div class="cta__buttons" id="contactButtons"></div>
+          <p class="cta__note" id="contactNote">Estamos empezando en Estelí, Madriz, Nueva Segovia y León.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -207,6 +266,6 @@
   <p class="wrap footer__note">Precios de prefactibilidad sujetos a diagnóstico en sitio.</p>
 </footer>
 
-<script src="script.js?v=3"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
